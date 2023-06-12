@@ -1,0 +1,24 @@
+---
+title: "here's a chart!"
+author: "Ben"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+library(skimr)
+```
+
+```{r}
+flights %>% 
+  skim()
+```
+
+```{r}
+flights %>% 
+  ggplot(aes(x = dep_delay, y = arr_delay)) +
+  geom_point() +
+  geom_smooth()
+```
+
